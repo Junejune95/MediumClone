@@ -5,6 +5,7 @@ final welcomeFont = GoogleFonts.roboto(
   fontSize: 60,
   fontWeight: FontWeight.w400,
   color: Colors.white,
+  decoration: TextDecoration.none
 );
 
 final normalFont = GoogleFonts.roboto(

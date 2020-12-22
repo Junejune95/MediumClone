@@ -72,6 +72,7 @@ class _HomePageState extends State<HomePage> {
             ),
             SideBarList(
               label: "Home",
+              index: 0,
               onTap: () {
                 print("reach");
                 Navigator.of(context).pop();
@@ -82,6 +83,7 @@ class _HomePageState extends State<HomePage> {
             ),
             SideBarList(
               label: "Audio",
+              index: 1,
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(new MaterialPageRoute(
@@ -91,6 +93,7 @@ class _HomePageState extends State<HomePage> {
             ),
             SideBarList(
               label: "Reading list",
+              index: 2,
               onTap: () {
                 setState(() {
                   _index = 2;
@@ -99,6 +102,7 @@ class _HomePageState extends State<HomePage> {
             ),
             SideBarList(
               label: "Interests",
+              index: 3,
               onTap: () {
                 setState(() {
                   _index = 3;
@@ -120,6 +124,7 @@ class _HomePageState extends State<HomePage> {
             ),
             SideBarList(
               label: "New Story",
+              index: 4,
               onTap: () {
                 setState(() {
                   _index = 4;
@@ -128,6 +133,7 @@ class _HomePageState extends State<HomePage> {
             ),
             SideBarList(
               label: "Stats",
+              index: 5,
               onTap: () {
                 setState(() {
                   _index = 5;
@@ -136,6 +142,7 @@ class _HomePageState extends State<HomePage> {
             ),
             SideBarList(
               label: "Stories",
+              index: 6,
               onTap: () {
                 setState(() {
                   _index = 6;
@@ -184,8 +191,8 @@ class _HomePageState extends State<HomePage> {
 class SideBarList extends StatelessWidget {
   final String label;
   final VoidCallback onTap;
-
-  const SideBarList({Key key, this.label, this.onTap}) : super(key: key);
+  final int index;
+  const SideBarList({Key key, this.label,this.index, this.onTap}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return ListTile(
@@ -194,7 +201,13 @@ class SideBarList extends StatelessWidget {
         style: normalFont,
       ),
       onTap: () {
-        print("reach");
+        print('Reach '+this.index.toString());
+       if(this.index ==1){
+                        Navigator.of(context).pop();
+                Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (BuildContext context) => ReadingListPage(),
+                ));
+       }
       },
     );
   }
