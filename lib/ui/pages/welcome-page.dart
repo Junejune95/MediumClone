@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mediumClone/ui/pages/home-page.dart';
+import 'package:mediumClone/ui/pages/main-page.dart';
 import 'package:mediumClone/ui/styles/app-style.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -19,7 +20,7 @@ class WelcomePage extends StatelessWidget {
             onPressed: () {
               // print("hello");
               Navigator.of(context).push(
-                MaterialPageRoute(builder: (c) => HomePage()),
+                MaterialPageRoute(builder: (c) => MainPage()),
               );
             },
           )
