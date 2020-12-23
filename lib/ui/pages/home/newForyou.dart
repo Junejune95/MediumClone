@@ -8,12 +8,12 @@ class NewForYouWidgets extends StatelessWidget {
     return Container(
       color: Color(0xFFFD7EFEF),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+        padding: const EdgeInsets.all(10),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+         mainAxisSize: MainAxisSize.min,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+             crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
                   "New For You",

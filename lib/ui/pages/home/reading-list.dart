@@ -4,25 +4,29 @@ import 'package:mediumClone/ui/styles/app-style.dart';
 class ReadingListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final _screenSize = MediaQuery.of(context).size;
     return Container(
       color: Color(0xFFFDF9E0),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+          // crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
             Text(
               "Reading list",
               style: title,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 15),
-              child: ListView.builder(
+             SizedBox(
+               height: _screenSize.height,
+               child: ListView.builder(
+                shrinkWrap: true,
                 itemCount: 6,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (c, index) => _CardWidget(),
               ),
-            )
+             ),
+           
           ],
         ),
       ),
@@ -35,7 +39,8 @@ class _CardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        // crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
         children: [
           Image.network(
             "https://miro.medium.com/fit/c/400/266/0*VuaSrxgkQ48JOmsd",
