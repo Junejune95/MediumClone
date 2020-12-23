@@ -19,6 +19,12 @@ final normalFont54 = GoogleFonts.roboto(
   color: Colors.black54,
 );
 
+final boldFont54 = GoogleFonts.roboto(
+  fontSize: 16,
+  fontWeight: FontWeight.w600,
+  color: Colors.black54,
+);
+
 final title = GoogleFonts.roboto(
   fontSize: 26,
   fontWeight: FontWeight.w500,

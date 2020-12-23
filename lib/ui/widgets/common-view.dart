@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:mediumClone/ui/widgets/titleImgRow-widget.dart';
 
 class CommonViewWidget extends StatelessWidget {
+  final String subTitle;
+  final String title;
+  final String img;
+
+  const CommonViewWidget({Key key, this.subTitle, this.title, this.img}) : super(key: key);
+  
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -13,7 +19,7 @@ class CommonViewWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 15, bottom: 5),
               child: Text(
-                "POPULAR ON MEDIUM",
+                this.subTitle,
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.black54,
@@ -23,8 +29,8 @@ class CommonViewWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: TitleImgRowWidget(
-                title: "4 Useful CSS Functions That You Should Know",
-                img: "https://miro.medium.com/fit/c/200/200/0*lqZUepkTlmgLP6B5",
+                title: this.title,
+                img: this.img,
               ),
             ),
             Padding(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mediumClone/ui/pages/home/newForyou.dart';
+import 'package:mediumClone/ui/pages/home/reading-list.dart';
+import 'package:mediumClone/ui/pages/pages.dart';
 import 'package:mediumClone/ui/styles/app-style.dart';
 import 'package:mediumClone/ui/widgets/common-view.dart';
 import 'package:mediumClone/ui/widgets/daily-block-widget.dart';
@@ -67,12 +69,48 @@ class MainPage extends StatelessWidget {
               child: Column(
                 children: List.generate(
                   5,
-                  (index) => CommonViewWidget(),
+                  (index) => CommonViewWidget(
+                    subTitle: "POPULAR ON MEDIUM",
+                    title: "4 Useful Css Cunctions That You Should Know",
+                    img:
+                        "https://miro.medium.com/fit/c/200/200/0*lqZUepkTlmgLP6B5",
+                  ),
                 ),
               ),
             ),
-         
-            NewForYouWidgets()
+            NewForYouWidgets(),
+            Container(
+              color: Colors.white,
+              child: Column(
+                children: List.generate(
+                  5,
+                  (index) => CommonViewWidget(
+                    subTitle: "BASED ON YOUR READING HISTORY",
+                    title:
+                        "29 of My Favorite Design Tools & Websites You’ve Never Heard of",
+                    img:
+                        "https://miro.medium.com/fit/c/400/266/1*O634OiiT5jE5MJezGLDZlw.png",
+                  ),
+                ),
+              ),
+            ),
+
+            Container(
+              color: Colors.white,
+              child: Column(
+                children: List.generate(
+                  5,
+                  (index) => CommonViewWidget(
+                    subTitle: "BASED ON YOUR READING HISTORY",
+                    title:
+                        "29 of My Favorite Design Tools & Websites You’ve Never Heard of",
+                    img:
+                        "https://miro.medium.com/fit/c/400/266/1*O634OiiT5jE5MJezGLDZlw.png",
+                  ),
+                ),
+              ),
+            ),
+            ReadingListWidget()
           ],
         ),
       ),
