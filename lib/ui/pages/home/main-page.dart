@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mediumClone/ui/pages/home/newForyou.dart';
 import 'package:mediumClone/ui/styles/app-style.dart';
 import 'package:mediumClone/ui/widgets/common-view.dart';
 import 'package:mediumClone/ui/widgets/daily-block-widget.dart';
@@ -69,7 +70,9 @@ class MainPage extends StatelessWidget {
                   (index) => CommonViewWidget(),
                 ),
               ),
-            )
+            ),
+         
+            NewForYouWidgets()
           ],
         ),
       ),

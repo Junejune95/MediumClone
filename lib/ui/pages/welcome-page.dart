@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mediumClone/ui/pages/home-page.dart';
-import 'package:mediumClone/ui/pages/main-page.dart';
+import 'package:mediumClone/ui/pages/home/main-page.dart';
 import 'package:mediumClone/ui/styles/app-style.dart';
 
 class WelcomePage extends StatelessWidget {
