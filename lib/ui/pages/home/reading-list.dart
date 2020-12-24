@@ -39,15 +39,14 @@ class _CardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width,
+      width: MediaQuery.of(context).size.width/1.1,
       child: Card(
         clipBehavior: Clip.antiAliasWithSaveLayer,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          // mainAxisSize: MainAxisSize.min,
           children: [
             Image.network(
-              "https://miro.medium.com/fit/c/400/266/0*VuaSrxgkQ48JOmsd",
+              "https://miro.medium.com/fit/c/400/266/1*1lpOIt3oAdA0p6FNhXWCsA.jpeg",
               height: 130,
               fit: BoxFit.cover,
               width: MediaQuery.of(context).size.width,

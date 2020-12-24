@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mediumClone/ui/pages/home/newForyou.dart';
 import 'package:mediumClone/ui/pages/home/reading-list.dart';
+import 'package:mediumClone/ui/pages/home/topic-for-you.dart';
 import 'package:mediumClone/ui/styles/app-style.dart';
 import 'package:mediumClone/ui/widgets/common-view.dart';
 import 'package:mediumClone/ui/widgets/daily-block-widget.dart';
@@ -116,7 +117,46 @@ class MainPage extends StatelessWidget {
                 ),
               ),
             ),
-            ReadingListWidget()
+            ReadingListWidget(),
+            Container(
+              color: Colors.white,
+              child: Column(
+                children: List.generate(
+                  5,
+                  (index) => CommonViewWidget(
+                    subTitle: "BASED ON YOUR READING HISTORY",
+                    title: "How design tools are shaping the way we design",
+                    img:
+                        "https://miro.medium.com/fit/c/400/266/1*b7RndTUFh8RH5Qw7p9_ZPg.png",
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              color: Colors.white,
+              child: Column(
+                children: [
+                  TopicForYou(),
+                  Divider(
+                    color: Colors.grey,
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              color: Colors.white,
+              child: Column(
+                children: List.generate(
+                  5,
+                  (index) => CommonViewWidget(
+                    subTitle: "BASED ON YOUR READING HISTORY",
+                    title: "How design tools are shaping the way we design",
+                    img:
+                        "https://miro.medium.com/fit/c/400/266/1*b7RndTUFh8RH5Qw7p9_ZPg.png",
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),

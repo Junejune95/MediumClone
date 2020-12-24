@@ -27,7 +27,7 @@ class TitleImgRowWidget extends StatelessWidget {
           child: Image.network(
             img,
             width: this.width != null ? this.width : 50,
-            height: this.heigh != null ? this.heigh : 100,
+            height: this.heigh != null ? this.heigh : 90,
             fit: BoxFit.contain,
             alignment: Alignment.topRight,
           ),
