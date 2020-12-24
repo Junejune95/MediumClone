@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mediumClone/ui/pages/home/newForyou.dart';
 import 'package:mediumClone/ui/pages/home/reading-list.dart';
+import 'package:mediumClone/ui/pages/home/search-page.dart';
 import 'package:mediumClone/ui/pages/home/topic-for-you.dart';
 import 'package:mediumClone/ui/styles/app-style.dart';
 import 'package:mediumClone/ui/widgets/common-view.dart';
@@ -29,7 +30,11 @@ class MainPage extends StatelessWidget {
               color: Colors.white38,
               size: 28,
             ),
-            onPressed: () {},
+            onPressed: () {
+                 Navigator.of(context).push(
+                  MaterialPageRoute(builder: (c) => SearchPage()),
+                );
+            },
           ),
         ],
         title: Text("Home"),
