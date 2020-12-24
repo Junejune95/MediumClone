@@ -41,6 +41,7 @@ class _CardWidget extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       child: Card(
+        clipBehavior: Clip.antiAliasWithSaveLayer,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           // mainAxisSize: MainAxisSize.min,
