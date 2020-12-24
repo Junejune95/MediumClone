@@ -10,10 +10,10 @@ class NewForYouWidgets extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
-         mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-             crossAxisAlignment: CrossAxisAlignment.center,
+             mainAxisAlignment:MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   "New For You",
