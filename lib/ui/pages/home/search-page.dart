@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mediumClone/ui/pages/home/main-page.dart';
 import 'package:mediumClone/ui/styles/app-style.dart';
 
 class SearchPage extends StatelessWidget {
@@ -15,7 +16,8 @@ class SearchPage extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return new Scaffold(
+      body: SafeArea(
       child: Container(
         color: Colors.white,
         child: Padding(
@@ -26,9 +28,9 @@ class SearchPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // IconButton(
-                  //     icon: Icon(Icons.arrow_back_ios_outlined),
-                  //     onPressed: () {}),
+                 // IconButton(
+                 //     icon: Icon(Icons.arrow_back_ios_outlined),
+                 //     onPressed: () {}),
                   Icon(Icons.arrow_back_ios_outlined),
                   Container(
                     height: 45,
@@ -83,6 +85,7 @@ class SearchPage extends StatelessWidget {
           ),
         ),
       ),
+      )
     );
   }
 }
