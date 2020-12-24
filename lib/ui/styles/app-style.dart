@@ -40,10 +40,21 @@ final subTitle = GoogleFonts.roboto(
 final small = GoogleFonts.roboto(
   fontSize: 14,
   color: Colors.black87,
+
 );
 
+final btnNormal=GoogleFonts.roboto(
+  fontSize: 16,
+  color:Colors.black87,
+    fontWeight: FontWeight.w400,
+    
+);
 
-
+final btnGreen=GoogleFonts.roboto(
+  color: Colors.green[500],
+  fontWeight: FontWeight.w400,
+  fontSize: 16
+);
 
 final bookTitleStyle = GoogleFonts.merriweather(
   color: Colors.white,

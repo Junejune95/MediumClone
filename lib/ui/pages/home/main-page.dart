@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mediumClone/ui/pages/home/newForyou.dart';
 import 'package:mediumClone/ui/pages/home/reading-list.dart';
-import 'package:mediumClone/ui/pages/pages.dart';
 import 'package:mediumClone/ui/styles/app-style.dart';
 import 'package:mediumClone/ui/widgets/common-view.dart';
 import 'package:mediumClone/ui/widgets/daily-block-widget.dart';
@@ -57,6 +56,10 @@ class MainPage extends StatelessWidget {
                         (index) => DailyBlockWidget(),
                       ),
                     ),
+                    Divider(
+                      color: Colors.grey,
+                    ),
+                    _DailyFooter()
                   ],
                 ),
               ),
@@ -67,15 +70,19 @@ class MainPage extends StatelessWidget {
             Container(
               color: Colors.white,
               child: Column(
-                children: List.generate(
-                  5,
-                  (index) => CommonViewWidget(
-                    subTitle: "POPULAR ON MEDIUM",
-                    title: "4 Useful Css Cunctions That You Should Know",
-                    img:
-                        "https://miro.medium.com/fit/c/200/200/0*lqZUepkTlmgLP6B5",
+                children: [
+                  Column(
+                    children: List.generate(
+                      5,
+                      (index) => CommonViewWidget(
+                        subTitle: "POPULAR ON MEDIUM",
+                        title: "4 Useful Css Cunctions That You Should Know",
+                        img:
+                            "https://miro.medium.com/fit/c/200/200/0*lqZUepkTlmgLP6B5",
+                      ),
+                    ),
                   ),
-                ),
+                ],
               ),
             ),
             NewForYouWidgets(),
@@ -94,7 +101,6 @@ class MainPage extends StatelessWidget {
                 ),
               ),
             ),
-
             Container(
               color: Colors.white,
               child: Column(
@@ -117,6 +123,51 @@ class MainPage extends StatelessWidget {
       drawer: Drawer(
         child: DrawerListWidget(),
       ),
+    );
+  }
+}
+
+class _DailyFooter extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        GestureDetector(
+          onTap: () {},
+          child: Text(
+            "Tune your \n recommendations",
+            style: btnGreen,
+          ),
+        ),
+        FlatButton(
+          onPressed: () {},
+          color: Colors.white,
+          shape: RoundedRectangleBorder(
+            side: BorderSide(
+              color: Colors.black87,
+              width: 1,
+              style: BorderStyle.solid,
+            ),
+            borderRadius: BorderRadius.circular(5),
+          ),
+          child: Row(
+            children: [
+              Text(
+                "Done for Today",
+                style: btnNormal,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Icon(
+                  Icons.check_circle_outline,
+                  color: Colors.black54,
+                ),
+              )
+            ],
+          ),
+        )
+      ],
     );
   }
 }

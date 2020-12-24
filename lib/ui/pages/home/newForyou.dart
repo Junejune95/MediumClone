@@ -25,18 +25,14 @@ class NewForYouWidgets extends StatelessWidget {
                       onPressed: () {},
                       child: Text(
                         "Customize",
-                        style: TextStyle(
-                          color: Colors.green[500],
-                        ),
+                        style:btnGreen,
                       ),
                     ),
                     FlatButton(
                       onPressed: () {},
                       child: Text(
                         "Seel All",
-                        style: TextStyle(
-                          color: Colors.green[500],
-                        ),
+                        style: btnGreen,
                       ),
                     ),
                   ],
